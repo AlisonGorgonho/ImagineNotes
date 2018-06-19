@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "imaginenotes": {
+    "imagine-notes": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/imaginenotes",
+            "outputPath": "dist/imagine-notes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,15 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootswatch/dist/materia/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -50,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "imaginenotes:build"
+            "browserTarget": "imagine-notes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "imaginenotes:build:production"
+              "browserTarget": "imagine-notes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "imaginenotes:build"
+            "browserTarget": "imagine-notes:build"
           }
         },
         "test": {
@@ -95,7 +101,7 @@
         }
       }
     },
-    "imaginenotes-e2e": {
+    "imagine-notes-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,7 +109,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "imaginenotes:serve"
+            "devServerTarget": "imagine-notes:serve"
           }
         },
         "lint": {
@@ -118,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "imaginenotes"
+  "defaultProject": "imagine-notes"
 }
