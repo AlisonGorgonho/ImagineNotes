@@ -9,15 +9,12 @@
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <ul class="navbar-nav ml-auto" *ngIf="!isLogged">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" routerLink="/">Login</a>
-      </li>
+    <ul class="navbar-nav ml-auto" *ngIf="!estaLogado">
       <li class="nav-item">
         <a class="nav-link" href="#" routerLink="/registrar">Registrar</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto" *ngIf="isLogged">
+    <ul class="navbar-nav ml-auto" *ngIf="estaLogado">
       <li class="nav-item">
         <a class="nav-link"><i class="fa fa-2x fa-spin fa-refresh"></i></a>
       </li>

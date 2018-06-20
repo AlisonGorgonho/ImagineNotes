@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootswatch/dist/materia/bootstrap.min.css",
+              "./node_modules/bootswatch/dist/minty/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
