@@ -20,6 +20,8 @@ import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messag
 import { LoginComponent } from './components/login/login.component';
 import { CartaoComponent } from './components/cartao/cartao.component';
 import { CartaoOpcoesComponent } from './components/cartao-opcoes/cartao-opcoes.component'
+import { CartaoService } from './services/cartao.service';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 
 @NgModule({
@@ -45,8 +47,10 @@ import { CartaoOpcoesComponent } from './components/cartao-opcoes/cartao-opcoes.
   ],
   providers: [
     AuthService,
+    CartaoService,
     AuthGuard,
-    FlashMessagesService
+    FlashMessagesService,
+    AngularFirestore
   ],
   bootstrap: [AppComponent]
 })

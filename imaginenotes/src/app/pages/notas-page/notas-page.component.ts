@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CartaoComponent } from './../../components/cartao/cartao.component'
+import { CartaoService } from '../../services/cartao.service';
+import { CartaoInterface } from '../../models/cartao';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-notas-page',
@@ -8,15 +11,16 @@ import { CartaoComponent } from './../../components/cartao/cartao.component'
 })
 export class NotasPageComponent implements OnInit {
 
-  cartoes: CartaoComponent[] = [
-    {titulo: "Card 1", descricao: "Desc 1", cor: 'vermelho'},
-    {titulo: "Card 2", descricao: "Desc 2", cor: 'amarelo'},
-    {titulo: "Card 3", descricao: "Desc 3", cor: 'verde'},
-    {titulo: "Card 3", descricao: "Desc 3", cor: ''}
-  ];
+  cartoes: CartaoInterface[];
 
-  constructor() { }
+  constructor(private cartaoService: CartaoService) { }
 
-  ngOnInit() { }
+  ngOnInit() {  
+    this.todosCartoes();
+  }
+
+  todosCartoes() {
+    this.cartaoService.listarCartoes().subscribe(cartoes => this.cartoes = cartoes);
+  }
 
 }
