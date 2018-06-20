@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CartaoService } from '../../services/cartao.service';
+import { Router } from '@angular/router';
 //import * as $ from 'jquery';
 
 @Component({
@@ -8,16 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartaoOpcoesComponent implements OnInit {
 
-  constructor() { }
+  @Input() id: string;
+
+  constructor(private cartaoService: CartaoService, private router: Router) { }
 
   ngOnInit() { }
-    
-    // $('.selecionar-cor').click(function () {
-    //   console.log('aaaa');
-    // });
 
-    onClickMudarCor(cor) {
-      console.log(cor);
+    onClickDeletarCartao(id) {
+      this.cartaoService.pegarCartao(id).subscribe((cartao) => {
+        this.cartaoService.deletarCartao(cartao);
+      });
+    }
+
+    onClickMudarCor(cor, id) {
+      this.cartaoService.pegarCartao(id).subscribe((cartao) => {
+        cartao.cor = cor;
+        this.cartaoService.alterarCartao(cartao);
+      });
     }
     
 

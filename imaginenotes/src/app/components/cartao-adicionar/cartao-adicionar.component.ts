@@ -32,11 +32,13 @@ export class CartaoAdicionarComponent implements OnInit {
   }
 
   onBlurSalvarCartao() {
-    this.cartao.dataCriacao = (new Date()).getTime();
-    this.authService.getUser().subscribe( user => {
-      this.cartao.userId = user.uid;
-      this.cartaoService.adicionarCartao(this.cartao);
-    });
+    if(this.cartao.conteudo !== '') {
+      this.cartao.dataCriacao = (new Date()).getTime();
+      this.authService.getUser().subscribe( user => {
+        this.cartao.userId = user.uid;
+        this.cartaoService.adicionarCartao(this.cartao);
+      });
+    }
   }
 
 }
