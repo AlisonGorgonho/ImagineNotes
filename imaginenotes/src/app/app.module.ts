@@ -22,6 +22,7 @@ import { CartaoComponent } from './components/cartao/cartao.component';
 import { CartaoOpcoesComponent } from './components/cartao-opcoes/cartao-opcoes.component'
 import { CartaoService } from './services/cartao.service';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { CartaoAdicionarComponent } from './components/cartao-adicionar/cartao-adicionar.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
     BuscaPageComponent,
     LoginComponent,
     CartaoComponent,
-    CartaoOpcoesComponent
+    CartaoOpcoesComponent,
+    CartaoAdicionarComponent
   ],
   imports: [
     BrowserModule,
