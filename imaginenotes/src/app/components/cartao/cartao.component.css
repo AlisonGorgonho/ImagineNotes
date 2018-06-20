@@ -1,0 +1,16 @@
+div.cartao {
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 130px;
+    border: 0;
+    border-radius: 0px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow:    2px 3px 5px 0px rgba(0, 0, 0, 0.33);
+    box-shadow:         2px 3px 5px 0px rgba(0, 0, 0, 0.33);
+}
+
+div.cartao:hover {
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow:    2px 3px 5px 0px rgba(0, 0, 0, 0.6);
+    box-shadow:         2px 3px 5px 0px rgba(0, 0, 0, 0.6);
+}

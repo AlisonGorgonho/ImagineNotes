@@ -4,19 +4,19 @@ import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class LoginPageComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
-  public email: string;
-  public password: string;
+  private email: string;
+  private password: string;
 
   constructor(
-    public authService: AuthService,
-    public router: Router,
-    public flashMessage: FlashMessagesService
+    private authService: AuthService,
+    private router: Router,
+    private flashMessage: FlashMessagesService
   ) { }
 
   ngOnInit() {

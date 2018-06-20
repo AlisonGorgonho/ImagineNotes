@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.texto-vermelho {
+    color: #f8bbd0;
+}
+
+.fundo-vermelho {
+    background-color: #f8bbd0;
+}
+
+.texto-amarelo {
+    color: #ffff8d;
+}
+
+.fundo-amarelo {
+    background-color: #ffff8d;
+}
+
+.texto-verde {
+    color: #ccff90;
+}
+
+.fundo-verde {
+    background-color: #ccff90;
+}

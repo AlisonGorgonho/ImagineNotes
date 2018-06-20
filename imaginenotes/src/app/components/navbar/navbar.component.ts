@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  public isLogged: boolean;
+  public estaLogado: boolean;
   public userName: string;
   public userEmail: string;
   public userPhoto: string;
@@ -22,24 +22,18 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.authService.getUser().subscribe( auth => {
       if(auth) {
-        this.isLogged = true;
+        this.estaLogado = true;
         this.userName = auth.displayName;
         this.userEmail = auth.email;
         this.userPhoto = auth.photoURL;
       } else {
-        this.isLogged = false;
+        this.estaLogado = false;
       }
     })
   }
 
   onClickLogout() {
     this.authService.logout();
-    // .then((response) => {
-    //   this.router.navigate(['/']);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // })
   }
 
 }
