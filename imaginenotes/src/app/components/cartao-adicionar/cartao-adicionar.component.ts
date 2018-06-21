@@ -37,6 +37,7 @@ export class CartaoAdicionarComponent implements OnInit {
       this.authService.getUser().subscribe( user => {
         this.cartao.userId = user.uid;
         this.cartaoService.adicionarCartao(this.cartao);
+        this.cartao.conteudo = '';
       });
     }
   }
