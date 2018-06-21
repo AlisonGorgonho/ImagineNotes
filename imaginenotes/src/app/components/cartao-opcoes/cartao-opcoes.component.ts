@@ -27,7 +27,6 @@ export class CartaoOpcoesComponent implements OnInit {
         cartao.cor = cor;
         this.cartaoService.alterarCartao(cartao);
       });
-    }
-    
+    }    
 
 }

@@ -1,6 +1,6 @@
 <app-cartao-adicionar></app-cartao-adicionar>
 <div class="d-flex flex-row justify-content-around">
-  <app-cartao *ngFor="let cartao of cartoes" titulo="{{ cartao.titulo }}" descricao="{{ cartao.conteudo }}" cor="{{ cartao.cor }}" id="{{ cartao.id }}" (mouseover)="cartao.showOptions = true" (mouseout)="cartao.showOptions = false">
-    <app-cartao-opcoes *ngIf="cartao.showOptions" id="{{ cartao.id }}"></app-cartao-opcoes>
+  <app-cartao *ngFor="let cartao of cartoes" titulo="{{ cartao.titulo }}" descricao="{{ cartao.conteudo }}" cor="{{ cartao.cor }}" id="{{ cartao.id }}">
+    <app-cartao-opcoes id="{{ cartao.id }}"></app-cartao-opcoes>
   </app-cartao>
 </div>

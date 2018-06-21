@@ -35,7 +35,7 @@ export class CartaoService {
     return this.cartoes;
   }
 
-  pegarCartao(idCartao: string) {
+  pegarCartao(idCartao: string) { 
     this.cartaoDoc = this.afs.doc<CartaoInterface>(`cartoes/${idCartao}`);
     this.cartao = this.cartaoDoc.snapshotChanges().pipe(
       map( action => {
@@ -51,7 +51,7 @@ export class CartaoService {
     return this.cartao;
   }
 
-  alterarCartao(cartao: CartaoInterface) {
+  alterarCartao(cartao: CartaoInterface) { 
     this.cartaoDoc = this.afs.doc<CartaoInterface>(`cartoes/${cartao.id}`);
     this.cartaoDoc.update(cartao);
   }
